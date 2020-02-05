@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cadastrar Produto</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script src="../js/jquery-3.4.1.js"></script>
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<script src="../js/bootstrap.js"></script>
+		<script src="../js/script.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-danger" role="navigation">
+			<a class="navbar-brand" href="index.html">
+				<img src="../img/logo.png" width="30" height="30" alt="logo">
+				SexShop FRANMAL
+			</a>
+			<div class="container-fluid">
+				<button type="button" class="navbar-toggler collased" data-toggle="collapse" data-target="#menuNav"><span class="navbar-toggler-icon"></span></button>
+
+				<div class="collapse navbar-collapse" id="menuNav">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a href="../index.html" class="nav-link text-light">Inicio</a></li>
+						<li class="nav-item"><a href="../produto.html" class="nav-link text-light">Produtos</a></li>
+						<li class="nav-item"><a href="../vendedor.html" class="nav-link text-light">Vendedores</a></li>
+						<li class="nav-item"><a href="../cadastro.html" class="nav-link text-light">Cadrasto</a></li>
+						<li class="nav-item"><a href="../dicas.html" class="nav-link text-light">Dicas da Franzinha</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container text-light">
+			<div class="row">
+				<div class="col-12">
+					<h2>Cadastrar Produto</h2>
+
+					<form action="../scripts/cadastrar-produto.php" method="POST">
+						<div class="form-group">
+							<label>Codigo do Vendedor</label>
+							<input type="text" class="form-control" name="codigoVend">
+						</div>
+
+						<div class="form-group">
+							<label>Codigo</label>
+							<input type="number" class="form-control" name="codigo">
+						</div>
+
+						<div class="form-group">
+							<label>Nome</label>
+							<input type="text" class="form-control" name="nome">
+						</div>
+						
+						<div class="form-group">
+							<label>Preço</label>
+							<input type="number" class="form-control" name="preco">
+						</div>
+
+						<div class="form-group">
+							<label>Setor</label>
+							<select class="form-control" name="setor">
+								<option value="1" selected>Brinquedos</option>
+								<option value="2">Fantasias</option>
+								<option value="3">Genéricos</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label>Quantidade em estoque</label>
+							<input type="number" class="form-control" name="estoque">
+						</div>
+						
+						<button type="submit" class="btn btn-danger">Cadastrar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
